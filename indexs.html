@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <h1 style="font-family:verdana"><strong>Exploring America's Ethnic and Racial Diversity and Well-Being Through
+      Data Science</strong>
+    <img src="Opening_Image.png">
+    <h1>
+
+</body>
+
+<body>
+  <h2>Abstract</h2>
+  <p style="font-family:verdana"> Since America's founding in the late 1700s, many foreign immigrants have traveled to
+    America to experience liberty,
+    freedom, and chances for success. Hence, America has transformed into a "Melting Pot" of cultures and perspectives.
+    Consequently, I want to perform data visualization statistics to portray the well-being of ethnic and racial
+    diversity and compare the two types of diversity. In this way, we gain insight into how America harnesses the power
+    of diversity and thus improve our facilities to shape a better America for everyone! </p>
+</body>
+
+<body>
+  <h2>Terms to Know</h2>
+  <p style="font-family:verdana"></p> Standard Error: It represents the average disparity between predicted and actual
+  values, especially for non-linear regression models. It is derived by square rooting the sum of the
+  residuals(differences between predicted and actual values) divided by the number of data points.</p>
+  <p style="font-family:verdana"></p>R²: Represents the coefficient of determination(how well regression models predict
+  the actual values on the y-axis).</p>
+  <p style="font-family:verdana"></p>Outlier: data point with a drastic difference in the overall distribution</p>
+  <p style="font-family:verdana"></p>Ethnicity: Shared cultural characteristics such as language and cultural traditions
+  </p>
+  <p style="font-family:verdana"></p>Race: Shared physical characteristics such as the physical color of a person.</p>
+  <p style="font-family:verdana"></p>Racial Diversity Section: For this section increase in rank is 50th, 49th, etc.
+  while decrease in rank is 1st, 2nd, 3rd, etc.</p>
+</body>
+
+<body>
+  <h2>Diversity versus Population</h2>
+  <p style="font-family:verdana"></p>Since the founding of the United States, many believe that with more population,
+  the melting pot of cultures grows. However, the correlation between population and diversity index seems to be
+  non-linear:</p>
+
+  <iframe id="igraph" scrolling="yes" style="border:none;" seamless="seamless"
+    src="https://plotly.com/~NRswift/185.embed" height="525" width="100%">
+  </iframe>
+  <p style="font-family:Ariel">The actual equation I used to find the Standard Residual Error was 41.123 + 6.093ln(x).
+    However, I had the equation as only 6.093ln(x) as it would not make sense for a state or national capital to have a
+    diversity index as 47.216%(when substituting 0 people in for x) with no population at all.</p>
+  <h3>Analysis</h3>
+  <p style="font-family:verdana"></p>Indeed, states with high populations like California and Texas have a greater
+  diversity index while states with less concentration of people such as Maine and Vermont are less diverse. However,
+  places with less population like Hawaii, Nevada, and Washington D.C seem to possess high racial diversity. Hence, the
+  logarithmic regression shows that states are finding ways to maintain a diverse environment despite less population
+  due to their high demand. Despite the graph shaping to be logarithmic to some extent, the model unveils a standard
+  error of 13.057% in the diversity index. Thus, there seems to be high variation, especially for states with
+  populations between 0 and 20 million. Nevertheless, the high concentration of racially diverse but less populous
+  states on top of highly diverse and populous states reveals potential for the logarithmic model. Even so, the
+  logarithmic model I have right now is not perfect due to a high variation in the diversity index.</p>
+</body>
+
+
+<body>
+  <h2>Diverse Culture</h2>
+  <p style="font-family:verdana"></p>It is clear that America's diversity is scattered across the nation. Now, let's
+  break down America's cultural environment on the ethnic level through analyzing the trends concerning languages and
+  cultural traditions. After all, The United States has a vibrant story to tell about the many cultures that make up
+  America's populace. This is true for America's popular world languages because states represent a multitude of
+  languages besides English and Spanish(as shown below):
+  </p>
+  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+    src="https://plotly.com/~NRswift/113.embed" height="525" width="100%"></iframe>'
+  <h3>Analysis</h3>
+  <p style="font-family:verdana"></p>Here, we can see
+  that a little over half the country possesses a high
+  concentration of people speaking German(13 states),
+  French(7 states), or Chinese(6 states).
+  However, what is most significant here is that the
+  amount of German speaking states(13) is actually a
+  significantly high outlier here. This seems to be explained by the established German Culture in the Plains(many Plain
+  States have a high concentration of Germans) ever since the high immigration/migration by Europeans toward the plains
+  to continue their agricultural traditions. The phenomenon of mass immigration and migration can also be seen with
+  popular languages such as French and Chinese from voyages and territorial expansion and cross country immigration,
+  respectively. After all, according to the graph, the bulk of French speaking states are in the Northeast and
+  Louisiana, centers of French influence in colonial and early America. In regards for the Chinese, many Chinese
+  concentrated states are on the West, where Chinese community was established from the Gold Rush and the East coasts
+  due to migration.
+  </p>
+
+
+  <p style="font-family: verdana"></p>With the rising
+  diversity and diffusion of language across the nation,
+  let's observe the response to the rise of linguistic
+  diversity, notable through the language translation
+  industry:</p>
+
+
+</body>
+
+<body>
+
+</body>
+
+</html>
