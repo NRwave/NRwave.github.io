@@ -1,21 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<html>
+
+<body>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+      }
+
+      .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 1500px;
+        /* Used in this example to enable scrolling */
+      }
+
+      .nav-area.animate {
+        top: -71px;
+      }
+
+      .nav-area.sticky {
+        top: 0;
+        z-index: 99;
+      }
+    </style>
+  </head>
+
+
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</body>
+
+<script>
+  $(function () {
+    var scroll = $(document).scrollTop();
+    var navHeight = $('.nav-area').outerHeight();
+
+    $(window).scroll(function () {
+      var scrolled = $(document).scrollTop();
+      if (scrolled > navHeight) {
+        $('.nav-area').addClass('animate');
+      } else {
+        $('.nav-area').removeClass('animate');
+      }
+
+      if (scrolled > scroll) {
+        $('.nav-area').removeClass('sticky');
+      } else {
+        $('.nav-area').addClass('sticky');
+      }
+
+      scroll = $(document).scrollTop();
+
+    });
+
+  });
+
+</script>
+
+
+
+
 <body>
   <h1 style="font-family:verdana"><strong>Exploring America's Ethnic and Racial Diversity and Well-Being Through
       Data Science</strong>
-    <img src="Opening_Image.png">
-    <h1>
-
+  </h1>
+  <img src="Opening_Image.png">
 </body>
 
 <body>
   <h2>Abstract</h2>
   <p style="font-family:verdana"> Since America's founding in the late 1700s, many foreign immigrants have traveled to
     America to experience liberty,
-    freedom, and chances for success. Hence, America has transformed into a "Melting Pot" of cultures and perspectives.
+    freedom, and chances for success. Hence, America has transformed into a "Melting Pot" of cultures and
+    perspectives.
     Consequently, I want to perform data visualization statistics to portray the well-being of ethnic and racial
-    diversity and compare the two types of diversity. In this way, we gain insight into how America harnesses the power
+    diversity and compare the two types of diversity. In this way, we gain insight into how America harnesses the
+    power
     of diversity and thus improve our facilities to shape a better America for everyone! </p>
 </body>
 
@@ -24,10 +116,12 @@
   <p style="font-family:verdana"></p> Standard Error: It represents the average disparity between predicted and actual
   values, especially for non-linear regression models. It is derived by square rooting the sum of the
   residuals(differences between predicted and actual values) divided by the number of data points.</p>
-  <p style="font-family:verdana"></p>R²: Represents the coefficient of determination(how well regression models predict
+  <p style="font-family:verdana"></p>R²: Represents the coefficient of determination(how well regression models
+  predict
   the actual values on the y-axis).</p>
   <p style="font-family:verdana"></p>Outlier: data point with a drastic difference in the overall distribution</p>
-  <p style="font-family:verdana"></p>Ethnicity: Shared cultural characteristics such as language and cultural traditions
+  <p style="font-family:verdana"></p>Ethnicity: Shared cultural characteristics such as language and cultural
+  traditions
   </p>
   <p style="font-family:verdana"></p>Race: Shared physical characteristics such as the physical color of a person.</p>
   <p style="font-family:verdana"></p>Racial Diversity Section: For this section increase in rank is 50th, 49th, etc.
@@ -40,16 +134,17 @@
   the melting pot of cultures grows. However, the correlation between population and diversity index seems to be
   non-linear:</p>
 
-  <iframe id="igraph" scrolling="yes" style="border:none;" seamless="seamless"
-    src="https://plotly.com/~NRswift/185.embed" height="525" width="100%">
-  </iframe>
+  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+    src="https://plotly.com/~NRswift/185.embed" height="525" width="100%"></iframe>
   <p style="font-family:Ariel">The actual equation I used to find the Standard Residual Error was 41.123 + 6.093ln(x).
-    However, I had the equation as only 6.093ln(x) as it would not make sense for a state or national capital to have a
+    However, I had the equation as only 6.093ln(x) as it would not make sense for a state or national capital to have
+    a
     diversity index as 47.216%(when substituting 0 people in for x) with no population at all.</p>
   <h3>Analysis</h3>
   <p style="font-family:verdana"></p>Indeed, states with high populations like California and Texas have a greater
   diversity index while states with less concentration of people such as Maine and Vermont are less diverse. However,
-  places with less population like Hawaii, Nevada, and Washington D.C seem to possess high racial diversity. Hence, the
+  places with less population like Hawaii, Nevada, and Washington D.C seem to possess high racial diversity. Hence,
+  the
   logarithmic regression shows that states are finding ways to maintain a diverse environment despite less population
   due to their high demand. Despite the graph shaping to be logarithmic to some extent, the model unveils a standard
   error of 13.057% in the diversity index. Thus, there seems to be high variation, especially for states with
@@ -76,8 +171,10 @@
   French(7 states), or Chinese(6 states).
   However, what is most significant here is that the
   amount of German speaking states(13) is actually a
-  significantly high outlier here. This seems to be explained by the established German Culture in the Plains(many Plain
-  States have a high concentration of Germans) ever since the high immigration/migration by Europeans toward the plains
+  significantly high outlier here. This seems to be explained by the established German Culture in the Plains(many
+  Plain
+  States have a high concentration of Germans) ever since the high immigration/migration by Europeans toward the
+  plains
   to continue their agricultural traditions. The phenomenon of mass immigration and migration can also be seen with
   popular languages such as French and Chinese from voyages and territorial expansion and cross country immigration,
   respectively. After all, according to the graph, the bulk of French speaking states are in the Northeast and
@@ -96,8 +193,6 @@
 
 </body>
 
-<body>
 
-</body>
 
 </html>
