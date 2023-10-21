@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .section {
+      color: black;
+      margin: 20px;
+      padding: 20px;
+      font-size: 17px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-stretch: condensed;
+    }
+
+    #navbar {
+      background-color: rgb(202, 54, 54);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: block;
+      transition: top 0.3s;
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    #navbar a:hover {
+      background-color: rgb(241, 104, 12);
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar">
+    <a href="./indexs.html">Analysis on Ethnic and Racial
+      Diversity</a>
+    <a href="./about.html">About</a>
+    <a href="./sources.html">Sources</a>
+  </div>
+
+
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
+</body>
+
+<body>
+
+  <center>
+    <div class="section" text-align="center">
+      <h1>
+        <br>
+        <br>
+        Exploring America's Ethnic and Racial Diversity and Well-Being Through Data Science
+      </h1>
+      <p>An observation of how well America is embracing the "Melting Pot" of minorities</p>
+    </div>
+  </center>
+  <hr class="rounded">
+
+</body>
+
+<body>
+  <div class="section">
+    <u>
+      <h2>Abstract</h2>
+    </u>
+    <p style="font-stretch:condensed;">
+      Since America's founding in the late 1700s, many foreign immigrants have traveled to
+      America to experience liberty,
+      freedom,
+      and chances for success. Hence,
+      America has transformed into a "Melting Pot"of cultures and perspectives. Consequently,
+      I want to perform data visualization statistics to portray the well-being of ethnic and racial diversity and
+      compare
+      the two types of diversity. In this way,
+      we gain insight into how America harnesses the power of diversity and thus improve our facilities to shape a
+      better
+      America for everyone ! </p>
+  </div>
+
+</body>
+
+<body>
+  <div class="section">
+    <u>
+      <h2>Terms to Know</h2>
+    </u>
+    <p></p>Standard Error: It represents the average disparity between predicted and actual
+    values,
+    especially for non-linear regression models. It is derived by square rooting the sum of the residuals(differences
+    between predicted and actual values) divided by the number of data points.</p>
+    <p></p>R²: Represents the coefficient of determination(how well regression models predict
+    the actual values on the y-axis).</p>
+    <p></p>Outlier: data point with a drastic difference in the overall distribution</p>
+    <p></p>Ethnicity: Shared cultural characteristics such as language and cultural traditions
+    </p>
+    <p></p>Race: Shared physical characteristics such as the physical color of a person.</p>
+    <p></p>Racial Diversity Section: For this section increase in rank is 50th,
+    49th,
+    etc. while decrease in rank is 1st,
+    2nd,
+    3rd,
+    etc.</p>
+    <h3>How to Use:</h3>
+    <p>You can hover over each of the data points and bars to get more information for each element</p>
+
+  </div>
+</body>
+<hr class="rounded">
+
+<body>
+  <div class="section">
+    <u>
+      <h2>Diversity versus Population</h2>
+    </u>
+    <p></p>Since the founding of the United States,
+    many believe that with more population,
+    the melting pot of cultures grows. However,
+    the correlation between population and diversity index seems to be non-linear:</p>
+    '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/185.embed" height="525" width="100%"></iframe>'
+    <p>The actual equation I used to find the Standard Residual Error was 41.123+6.093ln(x).
+      However,
+      I had the equation as only 6.093ln(x) as it would not make sense for a state or national capital to have a
+      diversity
+      index as 47.216%(when substituting 0 people in for x) with no population at all.</p>
+    <h3>Analysis</h3>
+    <p></p>Indeed,
+    states with high populations like California and Texas have a greater diversity index while states with less
+    concentration of people such as Maine and Vermont are less diverse. However,
+    places with less population like Hawaii,
+    Nevada,
+    and Washington D.C seem to possess high racial diversity. Hence,
+    the logarithmic regression shows that states are finding ways to maintain a diverse environment despite less
+    population due to their high demand. Despite the graph shaping to be logarithmic to some extent,
+    the model unveils a standard error of 13.057% in the diversity index. Thus,
+    there seems to be high variation,
+    especially for states with populations between 0 and 20 million. Nevertheless,
+    the high concentration of racially diverse but less populous states on top of highly diverse and populous states
+    reveals potential for the logarithmic model. Even so,
+    the logarithmic model I have right now is not perfect due to a high variation in the diversity index.</p>
+  </div>
+</body>
+<hr class="rounded">
+
+<body>
+  <div class="section">
+    <u>
+      <h2>Diverse Culture</h2>
+    </u>
+    <p></p>It is clear that America's diversity is scattered across the nation. Now, let's
+    break down America's cultural environment on the ethnic level through analyzing the trends concerning languages and
+    cultural traditions. After all,
+    The United States has a vibrant story to tell about the many cultures that make up America's populace. This is true
+    for America's popular world languages because states represent a multitude of languages besides English and
+    Spanish(as
+    shown below): </p><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/197.embed" height="525" width="100%"></iframe>
+    <h3>Analysis</h3>
+    <p></p>Here,
+    we can see that a little over half the country possesses a high concentration of people speaking German(13 states),
+    French(7 states),
+    or Chinese(6 states). However,
+    what is most significant here is that the amount of German speaking states(13) is actually a significantly high
+    outlier here. This seems to be explained by the established German Culture in the Plains(many Plain States have a
+    high
+    concentration of Germans) ever since the high immigration/migration by Europeans toward the plains to continue their
+    agricultural traditions. The phenomenon of mass immigration and migration can also be seen with popular languages
+    such
+    as French and Chinese from voyages and territorial expansion and cross country immigration,
+    respectively. After all,
+    according to the graph,
+    the bulk of French speaking states are in the Northeast and Louisiana,
+    centers of French influence in colonial and early America. In regards for the Chinese,
+    many Chinese concentrated states are on the West,
+    where Chinese community was established from the Gold Rush and the East coasts due to migration. </p>
+    <p style="font-family: verdana"></p>With the rising diversity and diffusion of language across the nation,
+    let's observe the response to the rise of linguistic
+    diversity,
+    notable through the language translation industry:</p><iframe id="igraph" scrolling="no" style="border:none;"
+      seamless="seamless" src="https://plotly.com/~NRswift/205.embed" height="525" width="100%"></iframe>
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/207.embed" height="525" width="100%"></iframe>
+    <h3>Analysis</h3>
+    <p style="font-family: verdana"></p>Here, the language translation employment is increasing at an average of
+    approximately 5,545 employees per year. Additionally, the R² is at a strong 0.979, meaning that 97.9% of the total
+    employment is accurately accounted for by the regression line. However, per the second graph, the acceleration of
+    employment seems to slow between 2020 and 2023. After all 2023, growth is expected to slow from 9,237(from 2022)
+    employees per year to 7,129 employees per year. Even still, 2023's growth rate(7,129 employees per year) is at the
+    70%
+    percentile out of all the growth rates, proving America's aggressive effort in hiring more translators and thus
+    investing in making the vast amount of diverse voices heard.
+
+    <p style="font-family: verdana"></p>On top of languages, America does host a variety of highly popular(and
+    internationally recognized) cultural festivals:</p>
+
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/134.embed" height="525" width="100%"></iframe>
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/136.embed" height="525" width="100%"></iframe>
+    <h3>Analysis</h3>
+    <p style="font-family: verdana"></p>According to the latitude and longitude map, there seems to be even distribution
+    of popular cultural celebrations in each half of the United States. After all, the eastern half presents culturally
+    diverse cities such as New York(which hosts two popular festivals(Puerto Rican and Brazilian Day)) and Dublin, Ohio.
+    In the Western half, on the other hand, the Native American influence has given birth to celebrations such as the
+    Cherokee National Holiday in Oklahoma. Apart from this, the European and Asian influence in the West during the
+    nineteenth century has also brought rise to New Ulm's German festival and San Francisco's Chinese New Year. Also,
+    there seem to be mixed culture festivals in states such as such as Louisiana due to the presence of French and
+    African
+    cultures. As per the bar graph, America predominately has popular events(8 festivals) celebrating cultures from the
+    western hemisphere, but the notable implementation of eastern cultures(4 festivals) and mixed(2 festivals) shows
+    America's recognition of cultural diversity.</p>
+
+  </div>
+</body>
+
+<body>
+  <div class="section">
+    <u>
+      <h2> Are Racial Groups Equipped for Success?</h2>
+    </u>
+    <p style="font-family: verdana"></p>Although it is clear that America is promoting its diversity on the ethnic
+    level,
+    America can tell a different story of the well-being of race. Let's analyze the correlations between racial equality
+    and the overall quality of the state economy, education, and healthcare system to evaluate how much success racial
+    communities have in America.</p>
+    <p style="font-family: verdana"></p>Let's look at state economies first(this was 2023 Data):</p>
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/199.embed" height="525" width="100%"></iframe>
+    <h3>Analysis</h3>
+    <p style="font_family: verdana"></p>Here, for every increase in equality rank, the rank of the economy overall
+    increases by 0.186. After all, it is true that with
+    diversity, more perspectives and ideas from employees
+    can be implemented in innovating and creating products
+    and inventions, hence improving profit. However, despite the slight positive correlation , there seems to be a high
+    variation in overall ranking. This is true with the regression line's very low R² of 0.0035(only 3.5% of the data
+    can
+    be explained by the regression). Washington D.C(Overall Ranking: 8th) and Utah(Overall Ranking: 2nd) especially
+    contribute to the high variation. Despite their economic quality being within the top ten, they have average racial
+    equality rankings of 51st and 30th respectively. Hence this shines light on the presence of uneven distribution of
+    economic opportunities for those states. Notably, however, struggling states like Alaska(Overall Ranking: 49th) and
+    Hawaii(Overall Ranking: 47th), are 1st and 6th in economic equality, respectively due to their high inclusiveness in
+    industries.</p>
+    <p style="font_family: verdana"></p> Let's look at state education systems next(this was 2023 Data):
+    '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/201.embed" height="525" width="100%"></iframe>'
+    <h3>Analysis</h3>
+    <p style="font_family: verdana"></p>Here, there seems to be a negative correlation in equality and overall education
+    ranking as for every increase in equality rank, rank decreases by 0.412. However, only 15.8% of overall education
+    rankings effectively accounted for by the regression line. Nevertheless, there seems to be significant data.
+    Notably,
+    states such as Massachusetts(Overall Ranking: 1st) and Connecticut (Overall Ranking: 2nd) impact the negative
+    correlation. Although highly ranked in education, boasting high scores in Math, Reading, and other International
+    Exams, Massachusetts and Connecticut are ranked 41st and 48th in racial equality, respectively. Hence, the
+    disparities
+    in educational resources within those states seem to be contributing to the negative trend, especially with the
+    lingering educational discrimination against Blacks. Again, the coefficient of determination (.158) proves the trend
+    to be not so strong(high variation in the graph), but the drastically low points far from the regression model in
+    Massachusetts and Connecticut in regards to overall education quality and racial equality are concerning. Hence, the
+    apparent racial inequality in education proves to be a rising struggle in the United States.</p>
+    <p style="font_family: verdana"></p>Finally, let's look at healthcare rankings for each state(this was 2023 Data):
+    </p>
+    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+      src="https://plotly.com/~NRswift/85.embed" height="525" width="100%"></iframe>
+    <p style="font_family: Times New Roman"></p>You can see here that Vermont(Overall Healthcare Ranking: 5) and
+    Maine(Overall Healthcare Ranking: 16) were not included in the distribution as they did not have rankings in regards
+    to Racial Equality for Healthcare.</p>
+    <h3>Analysis</h3>
+    <p style="font_family: Times New Roman"></p>Here, we find a strong positive correlation between racial equality and
+    overall healthcare for each state, backed by an R² of 0.691 as well as an increase in overall rank by 0.864 for
+    every
+    increase in equality rank. However, when it comes to states such as Minnesota and Wisconsin, although tied for an
+    above-average 21st in overall healthcare rankings, their respective racial equality rankings of 32nd and 37th raise
+    questions. Hence, despite 69.1 percent of the correlation of the overall rankings accounted for by the regression
+    line, correlation does not necessarily mean causation here. Especially with interesting scenarios with Minnesota and
+    Wisconsin, closer attention and reform towards maintaining racial equality in even adequate healthcare systems is
+    needed.</p>
+  </div>
+</body>
+<hr class="rounded">
+
+<body>
+  <div class="section">
+    <u>
+      <h2>Conclusion</h2>
+    </u>
+    <br>
+    Although there are clear signs of America's investment in promoting
+    ethnic diversity, the country can improve in maintaining
+    racial equality. After all, the high variations between racial equality and overall quality in especially state
+    economies and education systems exemplify existence of stable systems but low equality. Hence, there seems to be an
+    imbalance between how racial and ethnic diversity is valued, even though the two types of diversity should both be
+    greatly respected. Through opening up and improving opportunities for racial minorities, America can evolve as a
+    country. Thank you for reading my Data Science blog post and let us keep moving forward as a beautiful America!
+    </br>
+    </br>
+    </br>
+    </br>
+
+
+  </div>
+</body>
+
+</html>
